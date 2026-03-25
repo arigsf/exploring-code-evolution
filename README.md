@@ -81,9 +81,9 @@ Seja criativo!
 
 Responda às questões abaixo diretamente neste arquivo `README.md` do seu fork:
 
-1. Repositório selecionado: <URL_DO_REPOSITORIO_SELECIONADO_AQUI>
-2. Gráfico selecionado: <IMAGEM_DO_GRAFICO_SELECIONADO_AQUI>
-3. Explicação: <EXPLICACAO_AQUI>
+1. Repositório selecionado: [https://github.com/prisma/prisma](https://github.com/prisma/prisma)
+2. Gráfico selecionado:
 
+![Variables: typed vs untyped](graph.png)
 
-
+3. Explicação: O gráfico que me chamou mais atenção é o de "Variables: typed vs untyped". Ele mostra que o número de variáveis untyped, sem tipagem explícita, explodiu ao longo dos anos, chegando a 12000 declarações em 2026. Já as variáveis typed, com tipagem explícita, não tiveram o crescimento na mesma proporção, mantendo uma certa linearidade. É importante mencionar aqui do que se trata o Prisma. Ele é um ORM, famoso por trazer segurança de tipos para o banco de dados. Por isso, a priori, ver uma dominância de variáveis sem tipagem causa um certo estranhamento. Porém, não é uma má prática. Na verdade, omitir a tipagem explícita em variáveis locais e deixar o compilador deduzir o tipo automaticamente é recomendado pela [documentação](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-annotations-on-variables) oficial do TypeScript. A confiança na inferência segue a linha de manter o código mais limpo e reservar a tipagem explícita apenas para parâmetros e retornos de funções. Se a inferência de tipos não é tão ruim, ainda fica pendente os motivos da explosão da não tipagem nos últimos anos. Isso se deve em boa parte por causa da evolução do motor do TypeScript, que ficou mais inteligente na dedução dos tipos, das ferramentas de padronização (lints), que apagam tipagens explícitas desnecessárias, e do próprio crescimento da ferramenta enquanto utilização.
